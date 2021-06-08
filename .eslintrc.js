@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "root": true,
   "extends": "eslint:recommended",
   "globals": {
@@ -31,17 +31,5 @@ module.exports = {
       "\\.(coffee|scss|css|less|hbs|svg|json)$"
     ]
   },
-  "rules": {
-    "no-console": 0,
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "always-multiline",
-        "functions": "ignore"
-      }
-    ]
-  }
+  "rules": {}
 }

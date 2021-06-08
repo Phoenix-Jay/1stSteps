@@ -1,0 +1,136 @@
+footer {
+  margin-top: 60px;
+  margin-bottom: 120px;
+  background-color: #fff;
+  display: block;
+
+  @media (max-width: 991px) {
+    margin-bottom: 60px;
+  }
+
+  .social-icons-footer {
+    width: 100%;
+    text-align: center;
+
+    .social-icon {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: none;
+      font-size: 1px;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+    .facebook {
+      background-image: url("../../images/fb-white-icon.svg");
+      background-color: #c26807;
+    }
+
+    .instagram {
+      background-image: url("../../images/instagram-white-icon.svg");
+      background-color: #c26807;
+      background-size: 15px;
+    }
+  }
+
+  a {
+    font-family: "proxima-nova", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 25px;
+    font-size: 10px;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: #2a2a2a;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #2a2a2a;
+  }
+
+  .nav-secondary {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+
+    ul {
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+
+      li {
+        width: auto;
+
+        a {
+          background-color: #fff;
+          color: #2a2a2a;
+          width: 100%;
+          height: 40px;
+          text-align: left;
+          font-family: "proxima-nova", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          font-size: 10px;
+          line-height: 25px;
+          padding-top: 10px;
+          padding-left: 15px;
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: none;
+          color: #2a2a2a;
+        }
+      }
+    }
+  }
+
+  .footer-text {
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: 1200px) {
+      p:nth-child(6) {
+        display: block;
+        height: 0;
+        color: #2a2a2a;
+      }
+    }
+  }
+
+  p {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #2a2a2a;
+  }
+
+  .footer-text-dot {
+    margin: 0 5px;
+    font-weight: 700;
+
+    &:nth-last-of-type(2),
+    &:nth-last-of-type(3) {
+      @media (max-width: 991px) {
+        display: block;
+        line-height: 6px;
+      }
+    }
+
+    &:nth-last-of-type(4) {
+      @media (max-width: 991px) {
+        height: auto;
+      }
+    }
+  }
+
+  .footer-text-dot:last-child {
+    display: none;
+  }
+}

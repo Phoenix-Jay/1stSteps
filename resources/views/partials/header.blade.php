@@ -11,17 +11,24 @@
     <div class="header-wrapper">
       <a class="brand" href="http>//www.bergheim41.de">Bergheim41</a>
       <div class="right-wrapper">
-        <div class="haburger-wrapper">
+        <div class="hamburger-wrapper">
             <div class="hamburger-anim">
               <span></span>
               <span></span>
               <span></span>
+              <span></span>
             </div>
+            <script>
+            $('.hamburger-anim').click(function(){
+              $('.hamburger-anim').toggleClass('open');
+            });
+            </script>
             <span class="hamburger-text">menu</span>
         </div>
+        
         <a class="book" href="#">BOOK</a>
-        <a class="arival" href="#">Arival</a>
         <a class="contact" href="#">Contact</a>
+        <a class="arrival" href="#">Arrival</a>
       </div>
     </div>
   </div>

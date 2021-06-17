@@ -1,3 +1,13 @@
+@font-face {
+  font-family: primaryMenu;
+  src: url("../../fonts/Dosis-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: secondaryMenu;
+  src: url("../../fonts/EnzoWebW03Bold.ttf");
+}
+
 header {
   position: fixed;
   text-align: center;
@@ -31,6 +41,8 @@ header {
         background-image: url("../../images/header-logo.png");
         background-repeat: no-repeat;
         background-position: center;
+        background-color: $bc-secondary;
+        border: none;
         width: 210px;
         height: 60px;
         display: block;
@@ -55,6 +67,8 @@ header {
             height: 24px;
             float: left;
             position: relative;
+            margin-top: 23px;
+            margin-left: 30px;
             -webkit-transform: rotate(0deg);
             -moz-transform: rotate(0deg);
             -o-transform: rotate(0deg);
@@ -73,17 +87,17 @@ header {
             width: 100%;
             background: $bc-secondary;
             border-radius: 9px;
-            opacity: 1;
+            opacity: 1; // no transparency
             left: 0;
-            // when javascript function click removes class open it will make 1st element width go to 0 thus making it invisible
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg);
-            -webkit-transition: 0.25s ease-in-out;
-            -moz-transition: 0.25s ease-in-out;
-            -o-transition: 0.25s ease-in-out;
-            transition: 0.25s ease-in-out;
+            // when javascript function click removes class open it will make elements rotate back to starting position transitioning in 0.25s with ease-in-out effect
+            -webkit-transform: rotate(0deg); // for older chrome and safari browsers that support transition
+            -moz-transform: rotate(0deg); // for older firefox browsers that support transition
+            -o-transform: rotate(0deg); // for older opera browsers that support transition
+            transform: rotate(0deg); // for newer versions of all browsers (Chrome v36.0, Explorer/Edge v 10, Firefox v16.0, Safari v9.0, Opera v23.0)
+            -webkit-transition: 0.25s ease-in-out; // for older chrome and safari browsers that support transition
+            -moz-transition: 0.25s ease-in-out; // for older firefox browsers that support transition
+            -o-transition: 0.25s ease-in-out; // for older opera browsers that support transition
+            transition: 0.25s ease-in-out; // for newer versions of all browsers (Chrome v26.0, Explorer/Edge v 10, Firefox v16.0, Safari v6.1, Opera v12.1)
           }
 
           .hamburger-anim span:nth-child(1) {
@@ -126,8 +140,10 @@ header {
           }
 
           .hamburger-text {
-            //font-family: "DosisSB";
+            font-family: "primaryMenu", Arial, Helvetica, sans-serif;
+            font-weight: 400;
             text-transform: uppercase;
+            position: relative;
             margin-left: 15px;
             margin-top: 26px;
             font-size: 14px;
@@ -138,6 +154,84 @@ header {
             display: inline-block;
             float: left;
           }
+        }
+
+        .arrival {
+          float: right;
+          position: relative;
+          margin-top: 25px;
+          margin-right: 60px;
+          background-color: $bc-primary;
+          font-family: "primaryMenu", Arial, Helvetica, sans-serif;
+          font-size: 9px;
+          font-weight: bold;
+          color: $fc-primary;
+          font-style: italic;
+          letter-spacing: 0.1em;
+          line-height: 11px;
+          text-decoration: none;
+          display: inline-block;
+          text-transform: uppercase;
+        }
+
+        .arrival::after {
+          display: inline-block;
+          content: "";
+          height: 25px;
+          width: 17px;
+          background-image: url("../../images/pin.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: -7px;
+          right: -35px;
+        }
+
+        .book {
+          float: right;
+          position: relative;
+          font-family: "secondaryMenu", Arial, Helvetica, sans-serif;
+          padding-top: 20px;
+          font-size: 18px;
+          line-height: 18px;
+          letter-spacing: 0.3em;
+          font-weight: 900;
+          color: $fc-secondary;
+          text-align: center;
+          width: 215px;
+          height: 60px;
+          background-color: $bc-secondary;
+        }
+
+        .contact {
+          float: right;
+          position: relative;
+          margin-top: 25px;
+          margin-right: 60px;
+          background-color: $bc-primary;
+          font-family: "primaryMenu", Arial, Helvetica, sans-serif;
+          font-size: 9px;
+          font-weight: bold;
+          color: $fc-primary;
+          font-style: italic;
+          line-height: 11px;
+          letter-spacing: 0.1em;
+          text-decoration: none;
+          display: inline-block;
+          text-transform: uppercase;
+        }
+
+        .contact::after {
+          content: "";
+          height: 25px;
+          width: 23px;
+          background-image: url("../../images/kontakt.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          display: inline-block;
+          position: absolute;
+          top: -7px;
+          right: -35px;
         }
       }
     }

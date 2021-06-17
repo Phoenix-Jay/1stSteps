@@ -1,6 +1,35 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+/* custom font colors */
+$fc-primary: #000;
+$fc-secodary: #c26807;
+$fc-tertiary: #2a2a2a;
+$fc-quaternary: #666;
+$fc-quinary: #fff;
+$fc-senary: #676767;
+$fc-septary: #4e4e4e;
+$fc-optary: #282828;
+$fc-nonary: #0f0f0f;
+$fc-denary: #a3a3a3;
+
+/* custom background colors */
+$bc-primary: #fff;
+$bc-secondary: #2a2a2a;
+$bc-tertiary: #c26807;
+$bc-quaternary: #61432b;
+$bc-quinary: #f7f7f7;
+$bc-senary: #63432c;
+$bc-septary: #f4f4f4;
+$bc-optary: #fff;
+$bc-nonary: #fff;
+$bc-denary: #fff;
+
+// custom border colors
+$border-primary:          #dcdcdc;
+$border-secondary:        #fff;
+$border-teritary:         #e5e5e5;
+
 $theme-colors: (
   primary: #525ddc
 );
